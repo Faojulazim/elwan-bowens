@@ -1,0 +1,54 @@
+const hamburger = document.querySelector("#hamburger");
+const closeIcon = document.querySelector("#close");
+const list = document.querySelector("#list");
+const left = document.querySelector("#left");
+const interval = document.querySelector("#interval");
+const tabs = document.querySelectorAll("[data-tabs]");
+const services = document.querySelectorAll("[data-services]");
+hamburger.addEventListener("click", (e) => {
+  hamburger.classList.add("hidden");
+  closeIcon.classList.remove("opacity-0");
+  closeIcon.classList.remove("rotate-[90deg]");
+  left.classList.remove("translate-x-[-150%]");
+});
+closeIcon.addEventListener("click", (e) => {
+  hamburger.classList.remove("hidden");
+  closeIcon.classList.add("opacity-0");
+  closeIcon.classList.add("rotate-[90deg]");
+  left.classList.add("translate-x-[-150%]");
+});
+let i = 0;
+const text = ["Build", "Create", "Make"];
+setInterval(() => {
+  if (i == text.length) {
+    i = 0;
+  } else {
+    interval.innerText = text[i];
+    i++;
+  }
+}, 2000);
+
+(function getItems() {
+  services.forEach((items) => {
+    items.addEventListener("click", (e) => {
+      gtItems(items.innerText.replace(" ", "").toLowerCase());
+      items.classList.toggle("bg-[rgba(206_13_94/.7)]");
+      services.forEach((hiddens) => {
+        if (items !== hiddens) {
+          hiddens.classList.remove("bg-Accent");
+          hiddens.classList.remove("bg-[rgba(206_13_94/.7)]");
+        }
+      });
+    });
+  });
+})();
+
+function gtItems(items) {
+  tabs.forEach((tabItems) => {
+    if (items == tabItems.id) {
+      document.querySelector(`#${tabItems.id}`).classList.remove("hidden");
+    } else {
+      tabItems.classList.add("hidden");
+    }
+  });
+}
