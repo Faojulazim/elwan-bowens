@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,16 +28,51 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="dist/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "TLT5RV3zQccRt4jjY",
+        });
+      })();
+    </script>
+    <script defer src="script.js"></script>
     <title>Document</title>
   </head>
-  <body class="bg-Background text-white">
+  <body class="bg-Background text-white scroll-smooth">
     <!-- Home Section -->
-    <main class="px-5 font-RobotoFlex">
+    <div
+      class="flex items-center gap-x-5 py-5 bg-zinc-800 px-5 font-Inter text-[14px]"
+    >
+      <a
+        href="mailto:info@epc-tech.de"
+        class="flex items-center gap-x-2 text-white"
+        ><i class="fa-solid fa-envelope text-white text-[16px]"></i>
+        <p class="425:text-[17px]">info@epc-tech.de</p></a
+      >
+      <a
+        href="tel: +49 176 41742121"
+        class="flex items-center gap-x-2 text-white"
+        ><i class="fa-solid fa-phone text-white text-[16px]"></i>
+        <p class="425:text-[17px]">+49 176 41742121</p></a
+      >
+    </div>
+    <main class="px-5 font-RobotoFlex relative 500:px-7">
       <nav class="flex items-center w-full justify-between text-white py-7">
         <div class="flex relative items-center w-full justify-between">
           <img
-            class="w-[70px] border-2 rounded-[2px]"
+            class="w-[70px] border-2 rounded-[2px] 425:w-[85px]"
             src="assets/Logos/rounded-logo.jpg"
             alt=""
           />
@@ -63,7 +98,7 @@
         >
           <div class="flex items-center justify-between mb-10">
             <img
-              class="w-[70px] border-2 rounded-[2px]"
+              class="w-[70px] border-2 rounded-[2px] 425:w-[85px]"
               src="assets/Logos/rounded-logo.jpg"
               alt=""
             />
@@ -98,35 +133,32 @@
             Non's 3D Printing Corner
           </li>
           <li
-            class="text-xl mt-2 w-fit bg0 relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0"
+            class="text-xl mt-2 w-fit bg0 relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent"
           >
             Impressum
           </li>
         </ul>
       </div>
       <div>
-        <h1 class="mt-10 text-6xl tracking-wide font-Inter">
-          We <br /><span class="text-Accent font-[600]" id="interval"
-            >Build</span
-          >
-          PCs
+        <h1 class="mt-10 text-5xl tracking-wide font-Inter 425:text-6xl">
+          Custom PC's are on the
+          <span class="text-Accent font-[600]" id="interval">Horizon</span>
         </h1>
-        <p class="text-lg mt-2">
-          We build pc's that look insane. We've been building pc's for over 3
-          years and entrusted by more than 1000+ users. We don't build RIGs, We
-          build emotions.
+        <p class="text-lg mt-2 sm:text-xl pr-8">
+          No need for overpriced custom builds. Built per customer, no hidden
+          costs.
         </p>
         <button
-          class="text-md text-white font-[500] py-2 bg-Primary px-4 rounded-md mt-5"
+          class="text-md text-white font-[500] py-3 bg-Primary px-4 rounded-[2px] mt-5"
         >
-          Join us to deep dive into insanity?
+          Join us to deep dive into insanity!
         </button>
         <img class="mt-7 mb-6" src="assets/home-assets/final.png" alt="" />
       </div>
       <a
         href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=faojulazim13@gmail.com&su=Quote"
         target="_blank"
-        class="bg-Accent font-[500] px-6 py-3 rounded-md text-lg"
+        class="bg-Accent font-[500] px-6 py-3 rounded-sm text-lg"
       >
         Get a quote
       </a>
@@ -135,41 +167,31 @@
         <div class="flex items-center justify-center">
           <h1 class="text-4xl font-Inter">Gallery</h1>
         </div>
-        <div class="mt-5 grid gap-y-5">
+        <div
+          class="mx-auto mt-5 grid sm:grid-cols-[repeat(2,minmax(200px,1fr))] sm:gap-x-5 gap-y-5 500:gap-y-7 500:max-w-[400px]"
+        >
+          <img class="rounded-[3px]" src="assets/resized-images/1.jpg" alt="" />
+          <img class="rounded-[3px]" src="assets/resized-images/2.jpg" alt="" />
+          <img class="rounded-[3px]" src="assets/resized-images/3.jpg" alt="" />
+          <img class="rounded-[3px]" src="assets/resized-images/4.jpg" alt="" />
+          <img class="rounded-[3px]" src="assets/resized-images/5.jpg" alt="" />
+          <img class="rounded-[3px]" src="assets/resized-images/6.jpg" alt="" />
+          <img class="rounded-[3px]" src="assets/resized-images/7.jpg" alt="" />
+          <img class="rounded-[3px]" src="assets/resized-images/8.jpg" alt="" />
+          <img class="rounded-[3px]" src="assets/resized-images/9.jpg" alt="" />
           <img
             class="rounded-[3px]"
-            src="assets/PCPics/20220812_181508.jpg"
+            src="assets/resized-images/10.jpg"
             alt=""
           />
           <img
             class="rounded-[3px]"
-            src="assets/PCPics/20221014_193243.jpg"
+            src="assets/resized-images/11.jpg"
             alt=""
           />
           <img
             class="rounded-[3px]"
-            src="assets/PCPics/20230323_201816.jpg"
-            alt=""
-          />
-          <img class="rounded-[3px]" src="assets/PCPics/same.jpg" alt="" />
-          <img
-            class="rounded-[3px]"
-            src="assets/PCPics/IMG_20190727_173432_2.jpg"
-            alt=""
-          />
-          <img
-            class="rounded-[3px]"
-            src="assets/PCPics/IMG_20191016_190510.jpg"
-            alt=""
-          />
-          <img
-            class="rounded-[3px]"
-            src="assets/PCPics/IMG_20191229_212733.jpg"
-            alt=""
-          />
-          <img
-            class="rounded-[3px]"
-            src="assets/PCPics/IMG_20210101_223726.jpg"
+            src="assets/resized-images/12.jpg"
             alt=""
           />
         </div>
@@ -202,52 +224,59 @@
           <div
             class="flex flex-col gap-y-5 bg-[rgba(73,71,71,0.5)] px-5 py-5 my-5 rounded-[4px] border border-Accent"
           >
-            <form
-              class=""
-              action="https://formsubmit.co/26e4b8f15201f1a22cc7a05d5d0061d2"
-              method="POST"
-            >
+            <form class="" id="forms">
               <div class="flex flex-col items-start gap-y-3">
                 <div class="w-full">
                   <div class="flex items-center gap-x-2">
-                    <div class="w-[7px] h-[7px] bg-Accent rounded-full"></div>
+                    <div class="rounded-full text-Accent mt-1">&ast;</div>
                     <label for="" class="">Email</label>
                   </div>
                   <input
                     type="email"
                     name="email"
+                    required
                     placeholder="Email Address"
+                    id="email"
                     class="px-5 py-2 w-full outline-none rounded-sm text-black text-lg mt-2"
                   />
                 </div>
                 <div class="w-full">
                   <div class="flex items-center gap-x-2">
-                    <div class="w-[7px] h-[7px] bg-Accent rounded-full"></div>
+                    <div class="rounded-full text-Accent mt-1">&ast;</div>
                     <label for="" class="">Computer Details</label>
                   </div>
                   <input
                     type="text"
+                    required
                     placeholder="Computer Details"
                     name="Computer Details"
+                    id="computerD"
                     class="px-5 py-2 w-full outline-none rounded-sm text-black text-lg mt-2"
                   />
                 </div>
                 <div class="w-full">
                   <div class="flex items-center gap-x-2">
-                    <div class="w-[7px] h-[7px] bg-Accent rounded-full"></div>
-                    <label for="" class="">Price</label>
+                    <div class="rounded-full text-Accent mt-1">&ast;</div>
+                    <label for="" class="">Select Price Category</label>
                   </div>
-                  <input
-                    type="text"
-                    placeholder="Price"
-                    name="Price"
-                    class="px-5 py-2 w-full outline-none rounded-sm text-black text-lg mt-2"
-                  />
+                  <select
+                    name="cars"
+                    id="cars"
+                    class="rounded-sm px-4 w-full py-3 text-black text-[17px] font-Inter outline-Primary"
+                  >
+                    <option value="Budget ($500 - $1000)">
+                      Budget ($500 - $1000)
+                    </option>
+                    <option value="Mid-Range ($1000 - $2000)">
+                      Mid-Range ($1000 - $2000)
+                    </option>
+                    <option value="High-End ($2000+)">High-End ($2000+)</option>
+                  </select>
                 </div>
                 <div class="w-full">
                   <div class="flex items-center gap-x-2">
                     <div class="w-[7px] h-[7px] bg-Accent rounded-full"></div>
-                    <label for="" class="">Custom Request</label>
+                    <label for="" class="">Custom Requests</label>
                   </div>
                   <input
                     type="text"
@@ -263,13 +292,13 @@
                     class="size-5"
                     id="checkbox"
                   />
-                  <label for="checkbox"
+                  <label for="checkbox" class="font-[15px]"
                     >Do your have prior experience of PCs?</label
                   >
                 </div>
               </div>
               <button class="bg-Accent w-full mt-5 py-3 rounded-sm">
-                Submit
+                Get a quote
               </button>
             </form>
           </div>
@@ -341,17 +370,30 @@
               </div>
               <div class="w-full mt-5">
                 <div class="flex items-center gap-x-2">
-                  <div class="w-[7px] h-[7px] bg-Accent rounded-full"></div>
+                  <div class="rounded-full text-Accent mt-1">&ast;</div>
                   <label for="" class="">Email</label>
                 </div>
                 <input
                   type="email"
+                  required
                   placeholder="Email Address"
                   class="px-5 py-2 w-full outline-none rounded-sm text-black text-lg mt-2"
                 />
               </div>
-              <button class="bg-Accent w-full mt-5 py-3 rounded-sm">
-                Submit
+              <div class="w-full mt-3">
+                <div class="flex items-center gap-x-2">
+                  <div class="rounded-full text-Accent mt-1">&ast;</div>
+                  <label for="" class="">Enter Your Budget</label>
+                </div>
+                <input
+                  type="number"
+                  required
+                  placeholder="Enter Your Budget..."
+                  class="px-5 py-2 w-full outline-none rounded-sm text-black text-lg mt-2"
+                />
+              </div>
+              <button class="bg-Accent w-full mt-6 py-3 rounded-sm">
+                Get a quote
               </button>
             </form>
           </div>
@@ -380,58 +422,84 @@
               <div class="flex flex-col items-start gap-y-3">
                 <div class="w-full">
                   <div class="flex items-center gap-x-2">
-                    <div class="w-[7px] h-[7px] bg-Accent rounded-full"></div>
+                    <div class="rounded-full text-Accent mt-1">&ast;</div>
                     <label for="" class="">Email</label>
                   </div>
                   <input
                     type="email"
+                    required
                     placeholder="Email Address"
                     class="px-5 py-2 w-full outline-none rounded-sm text-black text-lg mt-2"
                   />
                 </div>
                 <div class="w-full">
                   <div class="flex items-center gap-x-2">
-                    <div class="w-[7px] h-[7px] bg-Accent rounded-full"></div>
-                    <label for="" class="">Brand</label>
+                    <div class="rounded-full text-Accent mt-1">&ast;</div>
+                    <label for="" class="">Device</label>
                   </div>
-                  <input
-                    type="Text"
-                    placeholder="Brand"
-                    class="px-5 py-2 w-full outline-none rounded-sm text-black text-lg mt-2"
-                  />
+                  <select
+                    name="cars"
+                    id="cars"
+                    class="rounded-sm px-4 w-full py-3 text-black text-[17px] font-Inter outline-Primary"
+                  >
+                    <option value="Phone">Phone</option>
+                    <option value="Tablet">Tablet</option>
+                    <option value="Laptop">Laptop</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
+
                 <div class="w-full">
                   <div class="flex items-center gap-x-2">
-                    <div class="w-[7px] h-[7px] bg-Accent rounded-full"></div>
-                    <label for="" class="">Model</label>
-                  </div>
-                  <input
-                    type="text"
-                    placeholder="Model"
-                    class="px-5 py-2 w-full outline-none rounded-sm text-black text-lg mt-2"
-                  />
-                </div>
-                <div class="w-full">
-                  <div class="flex items-center gap-x-2">
-                    <div class="w-[7px] h-[7px] bg-Accent rounded-full"></div>
+                    <div class="rounded-full text-Accent mt-1">&ast;</div>
                     <label for="" class="">Describe the issue</label>
                   </div>
-                  <input
-                    type="text"
-                    placeholder="Issue"
-                    class="px-5 py-2 w-full outline-none rounded-sm text-black text-lg mt-2"
-                  />
+                  <textarea
+                    name=""
+                    id=""
+                    required
+                    placeholder="Describe the issue"
+                    class="text-black w-full h-[150px] p-2 rounded-sm outline-Primary"
+                  ></textarea>
                 </div>
               </div>
               <button class="bg-Accent w-full mt-5 py-3 rounded-sm">
-                Submit
+                Get a quote
               </button>
             </form>
           </div>
         </div>
       </div>
+      <!-- Footer Section -->
     </main>
-
-    <script src="script.js"></script>
+    <footer class="bg-zinc-800">
+      <div class="flex gap-x-5 flex-col items-center justify-center py-5">
+        <div class="font-Inter">
+          <img
+            class="rounded-md w-[85px] mx-auto"
+            src="assets/Logos/rounded-logo.jpg"
+            alt=""
+          />
+          <h1 class="my-3"><span>&#169;</span> Copyright 2025 EPC-Tech</h1>
+        </div>
+        <div class="flex gap-x-5">
+          <div>
+            <div><i class="fa-brands fa-facebook text-2xl"></i></div>
+          </div>
+          <div>
+            <div><i class="fa-brands fa-x-twitter text-2xl"></i></div>
+          </div>
+          <div>
+            <div><i class="fa-brands fa-discord text-2xl"></i></div>
+          </div>
+          <div>
+            <div><i class="fa-brands fa-instagram text-2xl"></i></div>
+          </div>
+          <div>
+            <div><i class="fa-brands fa-linkedin text-2xl"></i></div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
