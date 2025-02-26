@@ -17,16 +17,16 @@ closeIcon.addEventListener("click", (e) => {
   closeIcon.classList.add("rotate-[90deg]");
   left.classList.add("translate-x-[-150%]");
 });
-let i = 0;
-const text = ["Build", "Create", "Make"];
-setInterval(() => {
-  if (i == text.length) {
-    i = 0;
-  } else {
-    interval.innerText = text[i];
-    i++;
-  }
-}, 2000);
+// let i = 0;
+// const text = ["Build", "Create", "Make"];
+// setInterval(() => {
+//   if (i == text.length) {
+//     i = 0;
+//   } else {
+//     interval.innerText = text[i];
+//     i++;
+//   }
+// }, 2000);
 
 (function getItems() {
   services.forEach((items) => {
@@ -47,8 +47,10 @@ function gtItems(items) {
   tabs.forEach((tabItems) => {
     if (items == tabItems.id) {
       document.querySelector(`#${tabItems.id}`).classList.remove("hidden");
+      document.querySelector(`#${tabItems.id}`).classList.remove("lg:hidden");
     } else {
       tabItems.classList.add("hidden");
+      tabItems.classList.add("lg:hidden");
     }
   });
 }

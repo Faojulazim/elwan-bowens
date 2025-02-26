@@ -15,6 +15,11 @@ module.exports = {
         RobotoFlex: ["Roboto Flex", "serif"],
         Karla: ["Karla", "serif"],
       },
+      screens: {
+        375: "375px",
+        425: "425px",
+        500: "500px",
+      },
     },
   },
   plugins: [],
