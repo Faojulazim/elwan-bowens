@@ -35,7 +35,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="dist/style.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -50,7 +50,7 @@
     <script defer src="script.js"></script>
     <title>Document</title>
   </head>
-  <body class="bg-Background text-white relative scroll-smooth">
+  <body class="bg-Background text-white scroll-smooth">
     <!-- Home Section -->
     <div
       class="flex items-center gap-x-5 py-5 bg-zinc-800 px-5 font-Inter text-[14px] 500:px-7 md:px-12 xl:px-20 2xl:px-40"
@@ -73,11 +73,11 @@
       class="px-5 font-RobotoFlex relative 500:px-7 md:px-12 xl:px-20 2xl:px-40"
     >
       <nav
-        class="flex items-center z-[200] justify-between text-white py-5 w-full sticky top-0 bg-black lg:top-[-1px]"
+        class="flex items-center z-[200] justify-between text-white py-5 w-full sticky top-[-1px] lg:left-0 bg-black lg:bg-zinc-800 lg:top-[25px] lg:rounded-full lg:py-3 lg:mt-5 lg:px-10"
       >
         <div class="flex relative items-center justify-between w-full lg:w-fit">
           <img
-            class="w-[70px] border-2 rounded-[2px] 425:w-[85px] lg:w-[100px]"
+            class="w-[70px] border-2 rounded-[2px] lg:w-[75px]"
             src="assets/Logos/rounded-logo.jpg"
             alt=""
           />
@@ -87,28 +87,28 @@
         <ul class="hidden lg:block lg:flex lg:gap-x-5 2xl:gap-x-10" id="list">
           <a href="#home">
             <li
-              class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+              class="text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
             >
               Home
             </li>
           </a>
           <a href="#gallery">
             <li
-              class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+              class="text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
             >
               Gallery
             </li>
           </a>
           <a href="#service">
             <li
-              class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+              class="text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
             >
               Services
             </li>
           </a>
           <a href="#impressum">
             <li
-              class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+              class="text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
             >
               Impressum
             </li>
@@ -116,14 +116,14 @@
 
           <a href="#threed">
             <li
-              class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+              class="text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
             >
               Non's 3D Printing Corner
             </li>
           </a>
           <a href="#aboutus">
             <li
-              class="text-xl w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
+              class="text-lg w-fit b relative after:absolute after:bg-white after:h-[2px] after:bottom-0 after:w-full after:left-0 hover:after:bg-Accent cursor-pointer"
             >
               About Us
             </li>
@@ -135,12 +135,12 @@
         id="left"
       >
         <div
-          class="flex flex-col px-5 500:px-7 pt-5 pb-14 absolute bg-zinc-800 w-full left-0 top-0"
+          class="flex flex-col px-5 500:px-7 md:px-12 pt-5 pb-14 absolute bg-zinc-800 w-full left-0 top-0"
           id="list"
         >
           <div class="flex items-center justify-between mb-10">
             <img
-              class="w-[70px] border-2 rounded-[2px] 425:w-[85px]"
+              class="w-[70px] border-2 rounded-[2px] lg:w-[75px]"
               src="assets/Logos/rounded-logo.jpg"
               alt=""
             />
@@ -348,7 +348,7 @@
                     name="email"
                     required
                     placeholder="Email Address"
-                    id="email"
+                    id="emailfirst"
                     class="px-5 py-2 w-full outline-none rounded-sm text-black text-lg mt-2"
                   />
                 </div>
@@ -362,7 +362,7 @@
                     required
                     placeholder="Computer Details"
                     name="Computer Details"
-                    id="computerD"
+                    id="messageforpcbuilding"
                     class="px-5 py-2 w-full outline-none rounded-sm text-black text-lg mt-2"
                   />
                 </div>
@@ -372,8 +372,8 @@
                     <label for="" class="">Select Price Category</label>
                   </div>
                   <select
-                    name="cars"
-                    id="cars"
+                    name=""
+                    id="options"
                     class="rounded-sm px-4 w-full py-3 text-black text-[17px] font-Inter outline-Primary"
                   >
                     <option value="Budget ($500 - $1000)">
@@ -418,7 +418,7 @@
           </div>
         </div>
         <div
-          class="500:w-[90%] sm:w-[80%] md:w-full lg:max-w-[1000px] mx-auto lg:flex lg:border lg:border-Accent lg:rounded-[4px] lg:mt-10 lg:rounded-[4px] hidden lg:hidden"
+          class="500:w-[90%] sm:w-[80%] md:w-full lg:max-w-[1000px] mx-auto mt-10 lg:flex lg:border lg:border-Accent hidden lg:hidden"
           id="upgrades"
           data-tabs=""
         >
